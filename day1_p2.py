@@ -11,16 +11,13 @@ def main():
 
     objective = 2020
     input_numbers = readFile()
-    complement = dict()
 
-    for number in input_numbers:
-        complement[number] = True
-        to_find = objective - number
-
-        if to_find in complement:
-
-            print(to_find*number)
-            break
+    for number1 in input_numbers:
+        for number2 in input_numbers:
+            for number3 in input_numbers:
+                if number1 + number2 + number3 == objective:
+                    print(number1*number2*number3)
+                    break
 
 if __name__ == '__main__':
 
