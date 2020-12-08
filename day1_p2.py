@@ -17,7 +17,6 @@ def main():
             for number3 in input_numbers:
                 if number1 + number2 + number3 == objective:
                     print(number1*number2*number3)
-                    break
 
 if __name__ == '__main__':
 
