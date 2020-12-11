@@ -46,7 +46,6 @@ def passport_validator(user_passports, fields):
 
     validated_passport = 0
     for user_passport in user_passports:
-        #print(int(user_passport[fields[3]][:-2]))
         if len(user_passport) == len(fields):
             validated_passport += int(passport_filter(user_passport, fields))
         elif len(user_passport) == len(fields[:-1]) and fields[-1] not in user_passport:
@@ -57,8 +56,6 @@ def passport_validator(user_passports, fields):
 def passport_filter(user_passport, fields):
 
     check = True
-
-    #print(int(user_passport[fields[0]]))
 
     if len(user_passport[fields[0]]) != 4 or int(user_passport[fields[0]]) < 1920 or int(user_passport[fields[0]]) > 2002:
         check = False
@@ -75,7 +72,6 @@ def passport_filter(user_passport, fields):
     if len(user_passport[fields[6]]) != 9 or type(int(user_passport[fields[6]])) != int:
         check = False
 
-    #print(not all(digit in string.hexdigits for digit in user_passport[fields[4]][:-1]))
     return check
 
 
@@ -84,7 +80,6 @@ def main():
     fields = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid', 'cid']
     passport_input = readFile()
     user_passports = list_to_dict(passport_input)
-    #print(user_passports[:3])
     passport_validator(user_passports, fields)
 
 
