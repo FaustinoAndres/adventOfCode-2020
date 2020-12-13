@@ -15,7 +15,6 @@ def seat_search(boarding_pass, rows, columns):
     finish_row = rows - 1
     init_col = 0
     finish_col = columns - 1
-    #middle_row = int(columns/2)
 
     for char in boarding_pass[:7]:
         middle_row = int((finish_row-init_row)/2) + 1
@@ -25,7 +24,6 @@ def seat_search(boarding_pass, rows, columns):
             init_row = init_row + middle_row
 
     row = init_row
-        #print(init_row, finish_row)
     for char in boarding_pass[7:]:
         middle_col = int((finish_col-init_col)/2) + 1
         if char == 'L':
