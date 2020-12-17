@@ -2,12 +2,12 @@ def readFile():
 
     f = open("Day2_data.txt", "r")
     lines = f.readlines()
-    
+
     input_password = list()
-    
+
     for line in lines:
         input_password.append(line.split())
-    
+
     return input_password
 
 def clean_input_password(input_password):
