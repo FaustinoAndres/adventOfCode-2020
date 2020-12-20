@@ -2,9 +2,9 @@ def readFile():
 
     f = open("day3_data.txt", "r")
     lines = f.readlines()
-    
+
     puzzle_input = list()
-    
+
     for line in lines:
         puzzle_input.append([char for char in line if char != '\n'])
 
